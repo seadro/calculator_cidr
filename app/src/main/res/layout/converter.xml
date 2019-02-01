@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/converter_outer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Converter">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_ipdecimal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ip_decimal" />
+
+            <EditText
+                android:id="@+id/converter_ipaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ipdecimal"
+                android:digits="0123456789."
+                android:ems="9"
+                android:hint="@string/put_ip_here"
+                android:inputType="text"
+                android:maxLength="15"
+                android:scrollHorizontally="true"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/convertdec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ipdecimal"
+                android:layout_toRightOf="@id/converter_ipaddress"
+                android:text="@string/convert_to_binaryhex" />
+
+            <TextView
+                android:id="@+id/label_ipbinary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/convertdec"
+                android:text="@string/ip_binary" />
+
+            <EditText
+                android:id="@+id/ipbinary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ipbinary"
+                android:digits="01."
+                android:ems="9"
+                android:inputType="numberDecimal"
+                android:maxLength="35"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/binary_all_zeros"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/convertbin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ipbinary"
+                android:text="@string/convert_to_decimalhex" />
+
+            <TextView
+                android:id="@+id/label_iphex"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/convertbin"
+                android:text="@string/ip_hex" />
+
+            <EditText
+                android:id="@+id/iphex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_iphex"
+                android:autoText="false"
+                android:ems="9"
+                android:inputType="textNoSuggestions"
+                android:maxLength="11"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/converthex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_iphex"
+                android:layout_toRightOf="@id/iphex"
+                android:text="@string/convert_to_decimalbinary" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

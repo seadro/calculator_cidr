@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources  xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <array name="bitlengths">
+        <item>/1</item>
+        <item>/2</item>
+        <item>/3</item>
+        <item>/4</item>
+        <item>/5</item>
+        <item>/6</item>
+        <item>/7</item>
+        <item>/8</item>
+        <item>/9</item>
+        <item>/10</item>
+        <item>/11</item>
+        <item>/12</item>
+        <item>/13</item>
+        <item>/14</item>
+        <item>/15</item>
+        <item>/16</item>
+        <item>/17</item>
+        <item>/18</item>
+        <item>/19</item>
+        <item>/20</item>
+        <item>/21</item>
+        <item>/22</item>
+        <item>/23</item>
+        <item>/24</item>
+        <item>/25</item>
+        <item>/26</item>
+        <item>/27</item>
+        <item>/28</item>
+        <item>/29</item>
+        <item>/30</item>
+        <item>/31</item>
+        <item>/32</item>
+    </array>
+    <array name="subnets">
+        <item>128.0.0.0</item>
+        <item>192.0.0.0</item>
+        <item>224.0.0.0</item>
+        <item>240.0.0.0</item>
+        <item>248.0.0.0</item>
+        <item>252.0.0.0</item>
+        <item>254.0.0.0</item>
+        <item>255.0.0.0</item>
+        <item>255.128.0.0</item>
+        <item>255.192.0.0</item>
+        <item>255.224.0.0</item>
+        <item>255.240.0.0</item>
+        <item>255.248.0.0</item>
+        <item>255.252.0.0</item>
+        <item>255.254.0.0</item>
+        <item>255.255.0.0</item>
+        <item>255.255.128.0</item>
+        <item>255.255.192.0</item>
+        <item>255.255.224.0</item>
+        <item>255.255.240.0</item>
+        <item>255.255.248.0</item>
+        <item>255.255.252.0</item>
+        <item>255.255.254.0</item>
+        <item>255.255.255.0</item>
+        <item>255.255.255.128</item>
+        <item>255.255.255.192</item>
+        <item>255.255.255.224</item>
+        <item>255.255.255.240</item>
+        <item>255.255.255.248</item>
+        <item>255.255.255.252</item>
+        <item>255.255.255.254</item>
+        <item>255.255.255.255</item>
+    </array>
+
+    <string-array name="pref_array_history_entries" translatable="false">
+        <item>10</item>
+        <item>100</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="pref_array_input_keyboard">
+        <item>@string/custom_hex</item>
+        <item>@string/number</item>
+        <item>@string/text</item>
+    </string-array>
+</resources>

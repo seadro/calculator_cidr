@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_outer_layout"
+    android:background="#FFFFF0"
+    tools:context=".CIDRCalculator">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_ipaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ip_address"
+                android:textColor="@android:color/black" />
+
+            <AutoCompleteTextView
+                android:id="@+id/ipaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ipaddress"
+                android:completionThreshold="5"
+                android:digits="0123456789."
+                android:ems="9"
+                android:hint="@string/put_ip_here"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="15"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <Spinner
+                android:id="@+id/bitlength"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ipaddress"
+                android:layout_toRightOf="@id/ipaddress"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <Spinner
+                android:id="@+id/subnetmask"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ipaddress"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <Button
+                android:id="@+id/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subnetmask"
+                android:text="@string/calculate" />
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/calculate"
+                android:layout_toRightOf="@id/calculate"
+                android:text="@string/reset" />
+
+            <TextView
+                android:id="@+id/label_address_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calculate"
+                android:text="@string/address_range"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/address_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_address_range"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/label_maximum_addresses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_range"
+                android:text="@string/maximum_addresses"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/maximum_addresses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_maximum_addresses"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/label_wildcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maximum_addresses"
+                android:text="@string/wildcard"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/wildcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_wildcard"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/label_ip_binary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wildcard"
+                android:text="@string/ip_binary"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ip_binary_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ip_binary"
+                android:background="#90EE90"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ip_binary_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ip_binary"
+                android:layout_toRightOf="@id/ip_binary_network"
+                android:background="#ADE8E6"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/label_ip_binary_netmask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ip_binary_network"
+                android:text="@string/ip_binary_netmask"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ip_binary_netmask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_ip_binary_netmask"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <!--
+
+    <LinearLayout
+        android:id="@+id/hexkeyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" />
+        -->
+
+</RelativeLayout>
